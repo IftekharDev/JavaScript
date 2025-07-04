@@ -321,3 +321,5 @@ console.log(firstName[firstName.length -1])
 
 console.log(''.length)
 console.log(" ".length)
+
+//// On to next
