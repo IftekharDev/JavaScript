@@ -121,3 +121,120 @@ if (marks >= 33) {
 }
 
 
+
+
+//// -------- Switch Statement -----------------
+
+color = "green";
+
+switch(color) {
+    case 'red':
+        console.log("Stop");
+        break;
+    case 'yellow':
+        console.log("Start");
+        break;
+    case 'green':
+        console.log("Go");
+        break;
+    default :
+        console.log("Broken Light");
+}
+
+//// --------------------------------------
+
+day = 3;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7 :
+        console.log("Sunday");
+        break;
+    default :
+    console.log("Wrong Day")
+}
+
+
+
+//// -----------------Practice Questions-------------
+
+let num = 73;
+
+if (num % 10 == 0) {
+    console.log("good");
+} else {
+    console.log("bad");
+}
+
+//// --------------------------------------
+
+let quarter = 2;
+
+switch (quarter) {
+    case 1:
+        console.log("Months in Quarter 1 : January, Febrauary, March");
+        break;
+    case 2:
+        console.log("Months in Quarter 2 : April, May, June");
+        break;
+    case 3:
+        console.log("Months in Quarter 3 : July, August, September");
+        break;
+    case 4:
+        console.log("Months in Quarter 4 : October, November, December");
+        break;
+    default:
+        console.log("Not a valid quarter.");
+}
+
+//// --------------------------------------
+
+string = 'Abracadabra'
+
+if ((string[0] === 'a' || string[0] === 'A') && string.length >= 5) {
+    console.log("golden string")
+} else {
+    console.log("Not a golden string")
+}
+
+//// --------------------------------------
+
+num1 = 12;
+num2 = 31;
+num3 = 24;
+
+if ((num1 > num2) && (num1 > num3)) {
+    console.log(`${num1} is the greatest number`);
+} else if (num2 > num3) {
+    console.log(`${num2} is the greates number`);
+} else {
+    console.log(`${num3} is the greatest number`)
+}
+
+//// --------------------------------------
+
+num1 = 32;
+num2 = 47852;
+
+if (num1 % 10 == num2 % 10) {
+    console.log("Both number have same last digit")
+} else {
+    console.log("Both number doesn't have same last digit")
+}
