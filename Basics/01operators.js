@@ -139,3 +139,161 @@ console.log("P" < 'p');
 console.log('a' < "B");
 console.log("*" > '&');
 
+
+
+
+//// -------- Logical Operators -----------------
+
+/// && - Logical AND operator
+
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+console.log((5 > 3) && (3 > 1));
+console.log((5 > 3) && (3 < 1));
+console.log((5 < 3) && (3 > 1));
+console.log((5 < 3) && (3 < 1));
+
+
+marks = 90;
+
+if (marks >= 33 && marks >= 80) {
+    console.log("Pass")
+    console.log("A+")
+}
+
+
+/// || - Logical NOT operator
+
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+
+/// ! - Logical NOT operator
+
+console.log(!true);
+console.log(!false);
+console.log(!(5 > 3));
+
+
+marks = 75;
+
+if ((marks > 33 && marks <= 80) || !false) {
+    console.log("Pass");
+}
+
+
+
+//// -------- Logical Operators -----------------
+
+/// Qs. A "good string" is a string that starts with the letter 'a' & has a length > 3. Write a program to find if a string is good or not.
+
+
+string = "a boy is there"
+
+if ((string[0] ==='a') && (string.length >3)) {
+    console.log("good String")
+} else {
+    console.log("Not a good string")
+}
+
+
+
+
+//// -------- Truthy & falsy -----------------
+
+if (true) {
+    console.log("It has true value.")
+} else {
+    console.log("It has false value.")
+}
+
+if (0) {
+    console.log("It has true value.")
+} else {
+    console.log("It has false value.")
+}
+
+if (1) {
+    console.log("It has true value.")
+} else {
+    console.log("It has false value.")
+}
+
+if ("") {
+    console.log("It has true value.")
+} else {
+    console.log("It has false value.")
+}
+
+if (null) {
+    console.log("It has true value.")
+} else {
+    console.log("It has false value.")
+}
+
+if (undefined) {
+    console.log("It has true value.")
+} else {
+    console.log("It has false value.")
+}
+
+num = 0;
+
+if (num) {
+    console.log("num is not 0");
+} else {
+    console.log("num is 0")
+}
+
+
+
+//// -------- Switch Statement -----------------
+
+color = "green";
+
+switch(color) {
+    case 'red':
+        console.log("Stop");
+        break;
+    case 'yellow':
+        console.log("Start");
+        break;
+    case 'green':
+        console.log("Go");
+        break;
+    default :
+        console.log("Broken Light");
+}
+
+day = 3;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7 :
+        console.log("Sunday");
+        break;
+    default :
+    console.log("Wrong Day")
+}
