@@ -7,8 +7,9 @@ let b = 5;
 console.log("Sum is: ", a + b);
 
 
-//// -------- Template Literals -----------------
 
+
+//// -------- Template Literals -----------------
 
 let pencilPrice = 10;
 let eraserPrice = 5;
@@ -21,8 +22,9 @@ output = `The total price is: ${pencilPrice + eraserPrice} Rupees.`
 console.log(output)
 
 
-//// -------- Arthimetic Operators -----------------
 
+
+//// -------- Arthimetic Operators -----------------
 
 a = 10;
 b = 5;
@@ -32,6 +34,8 @@ console.log(a * b);
 console.log(a / b);
 console.log(a % b);
 console.log(a ** b);
+
+
 
 
 //// -------- Unary Operators -----------------
@@ -73,6 +77,7 @@ console.log(b)
 
 
 
+
 //// -------- Assignment Operators -----------------
 
 a = 10;
@@ -91,8 +96,9 @@ a%=3;
 console.log(a);
 
 
-//// -------- Comparision Operators -----------------
 
+
+//// -------- Comparision Operators -----------------
 
 let age = 16;
 console.log(age > 18);
@@ -121,6 +127,8 @@ console.log(1 === '1');
 console.log(0 === '');
 console.log(0 === false);
 console.log(null == undefined);
+
+
 
 
 //// -------- Comparision for Non-numbers -----------------

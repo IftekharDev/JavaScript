@@ -24,7 +24,7 @@ console.log(typeof("a"))
 
 
 
-//// `Numbers in JS`
+//// ----------------Numbers in JS-------------
 
 a = 16
 console.log(typeof(a))
@@ -55,7 +55,7 @@ console.log(a)  // output - 1 (cause there is a limit) - rounded off to nearest 
 
 
 
-//// `Operations in JS`
+////-------------------Operations in JS------------
 
 a = 10
 b = 20
@@ -82,7 +82,7 @@ console.log(a**b)
 
 
 
-//// `NaN in JS`
+//// -----------------NaN in JS---------------
 
 console.log(0 / 0)
 console.log(typeof(0 / 0))
@@ -95,7 +95,7 @@ console.log(NaN * NaN)
 
 
 
-//// `Operator Precendence`
+//// -------------------Operator Precendence------------
 
 console.log((5+2)/7+1*2)
 
@@ -106,9 +106,9 @@ console.log(4+1*6/2)  //7
 
 
 
-//// `Practice QS`
+//// -----------------Practice QS----------
 
-//// `Qs. What is the value of age after this code runs?`
+//// Qs. What is the value of age after this code runs?
 
 let age = 23;
 console.log(age + 2)
@@ -126,7 +126,7 @@ console.log(avg)
 
 
 
-//// Assignment Operators
+//// -------------------Assignment Operators-----------
 
 let a = 5;
 let b = a;
@@ -142,7 +142,7 @@ console.log(age)
 
 
 
-//// Unary Operators
+//// --------------------Unary Operators---------------
 
 let year = 2002;
 year++  // increment
@@ -189,7 +189,7 @@ console.log(newNum, num)
 
 
 
-//// Identifier Rules
+//// ----------------------Identifier Rules-----------------
 
 let price1;
 let price123;
@@ -208,7 +208,7 @@ console.log(Price)  // price and Price are not same (case sensitive)
 
 
 
-//// Boolean in JS
+//// --------------------Boolean in JS-------------------
 
 let age3 = 13;
 let isAdult = false;
@@ -230,7 +230,7 @@ console.log(typeof(a))  // boolean - its possible to change the type of variable
 
 
 
-//// String in JS
+//// ---------------------String in JS-----------------
 
 let firstName = "Tony";
 console.log(firstName);
@@ -261,7 +261,7 @@ console.log(sentence)
 
 
 
-//// String Indices
+//// --------------------String Indices--------------------
 
 let name = "Tony Stark"
 console.log(name[0])
@@ -275,7 +275,7 @@ console.log("Arsalan"[1])
 
 
 
-//// String Concatenation
+//// ---------------------String Concatenation--------------------
 
 let firstName1 = "Tony";
 let lastName1 = "Stark"
@@ -289,7 +289,7 @@ console.log(firstName1 + 1)  // Number also gets concatenated to the string as a
 
 
 
-//// Null & Undefined in JS
+//// -------------------Null & Undefined in JS-----------------------
 
 let name3;
 console.log(name3);
@@ -309,7 +309,7 @@ console.log(year2)
 
 
 
-//// Practice Qs
+//// ----------Practice Qs----------
 
 name = "Iftekhar";
 console.log(name.length)
@@ -322,4 +322,5 @@ console.log(firstName[firstName.length -1])
 console.log(''.length)
 console.log(" ".length)
 
-//// On to next
+
+
