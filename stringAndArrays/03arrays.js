@@ -113,3 +113,38 @@ let arr_2D = [["X", null, "O"], [null , "X", null], ["O", null, "X"]];
 console.log(arr_2D);
 arr_2D[0][1] = "O";
 console.log(arr_2D);
+
+
+arr = [7, 9, 0, -2];
+n = 3;
+console.log(arr.slice(0, n));
+
+
+arr = [7, 9, 0, -2];
+n = 3;
+console.log(arr.slice(-n));
+
+
+let str = '';
+if (str.length == 0) {
+    console.log("String is blank");
+} else {
+    console.log("String is not blank");
+}
+
+
+let Name = "Arsalan Shaami";
+let Index = 5;
+if (Name[Index] === Name[Index].toLowerCase()) {
+    console.log(`The character '${Name[Index]}' present at ${Index} in ${Name} is in lower case.`);
+} else {
+    console.log(`The character present at ${Index} in ${Name} is not in lower case.`);
+}
+
+
+let msg = "        Hello       ";
+console.log(msg.trim());
+
+
+let names = ["Shabbana", "Ibrana", "Rokhsana", "Farzana", "Irfana"];
+console.log(names.includes("Ibrana"));
