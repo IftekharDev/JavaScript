@@ -33,62 +33,65 @@ while ((guess != movie)) {
 
 //// ------ Loops with Arrays ------------
 
-// let fruits = ["mango 🥭", "apple 🍎", "banana 🍌", "litchi", "papaya"];
-// fruits.push("pineapple 🍍");
+let fruits = ["mango 🥭", "apple 🍎", "banana 🍌", "litchi", "papaya"];
+fruits.push("pineapple 🍍");
 
-// for (i =0; i<fruits.length ; i++) {
-//     console.log(i, fruits[i]);
-// }
+for (i =0; i<fruits.length ; i++) {
+    console.log(i, fruits[i]);
+}
 
-// for (i= (fruits.length-1); i>=0; i-- ) {
-//     console.log(i, fruits[i]);
-// }
+
+for (i= (fruits.length-1); i>=0; i-- ) {
+    console.log(i, fruits[i]);
+}
 
 
 
 
 //// ------ Loops with Nested Arrays ------------
 
-// let heroes = [["ironman", "spiderman", "thor"], ["superman", "wonderwoman", "flash"]];
+let heroes = [["ironman", "spiderman", "thor"], ["superman", "wonderwoman", "flash"]];
 
-// for (i = 0; i<heroes.length; i++) {
-//     for(j = 0; j<heroes[i].length; j++) {
-//         console.log(heroes[i][j]);
-//     }
-// }
+for (i = 0; i<heroes.length; i++) {
+    for(j = 0; j<heroes[i].length; j++) {
+        console.log(heroes[i][j]);
+    }
+}
 
-// let students = [["Clark", 95], ["Loius", 96], ["Ben", 77]];
 
-// for (i= 0; i<students.length; i ++) {
-//     for (j = 0; j<students[i].length; j++) {
-//         console.log(students[i][j]);
-//     }
-// }
+let students = [["Clark", 95], ["Loius", 96], ["Ben", 77]];
+
+for (i= 0; i<students.length; i ++) {
+    for (j = 0; j<students[i].length; j++) {
+        console.log(students[i][j]);
+    }
+}
 
 
 
 
 //// ------ for of loop ------------
 
-// fruits = ["mango 🥭", "apple 🍎", "banana 🍌", "litchi", "papaya"];
+fruits = ["mango 🥭", "apple 🍎", "banana 🍌", "litchi", "papaya"];
 
-// for (fruit of fruits) {
-//     console.log(fruit);
-// }
+for (fruit of fruits) {
+    console.log(fruit);
+}
 
-// for (char of "Arsalan") {
-//     console.log(char);
-// }
+
+for (char of "Arsalan") {
+    console.log(char);
+}
 
 
 
 
 //// ------Nested for of loop ------------
 
-// heroes = [["ironman", "spiderman", "thor", "captain america"], ["superman", "wonderwoman", "flash"]];
+heroes = [["ironman", "spiderman", "thor", "captain america"], ["superman", "wonderwoman", "flash"]];
 
-// for (list of heroes) {
-//     for (hero of list) {
-//         console.log(hero);
-//     }
-// }
+for (list of heroes) {
+    for (hero of list) {
+        console.log(hero);
+    }
+}
