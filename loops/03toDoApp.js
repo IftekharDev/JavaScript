@@ -5,6 +5,7 @@ while (true) {
     userInput = prompt("Type what you want to do: ");
 
     if (userInput == 'quit') {
+        console.log("Quitting To Do app.");
         break;
     }
 
@@ -23,6 +24,6 @@ while (true) {
         toDo.splice(taskIndex, 1);
         console.log("Task deleted sucessfully.");
     } else {
-        console.log("wrong selection. Please choose the correct operation.");
+        console.log("wrong request. Please choose the correct operation.");
     }
 }
