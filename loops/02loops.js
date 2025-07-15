@@ -95,3 +95,74 @@ for (list of heroes) {
         console.log(hero);
     }
 }
+
+
+
+
+////-------- Practice Qs.--------------------
+
+//// Qs1. Write a JS program to delete all occurrences of element ‘num’ in a given array.
+
+arr = [1, 2, 3, 4, 5, 6, 2, 3];
+num = 2;
+
+while (arr.indexOf(num) != -1) {
+    numIndex = arr.indexOf(num);
+    arr.splice(numIndex, 1);
+}
+
+console.log(`all occurance of ${num} removed from the array`);
+console.log(arr);
+
+
+//// Qs2. Write a JS program to find the no of digits in a number.
+
+let number = 287152;
+let count = 0;
+
+let stringNum = String(number)
+
+for (char in stringNum) {
+    count+=1;
+}
+console.log(count);
+
+
+//// Qs3. Write a JS program to find the sum of digits in a number.
+
+number = 287152;
+let sum = 0;
+
+stringNum = String(number)
+
+for (char in stringNum) {
+    remainder = number%10;  //2, 
+    quotient = Math.floor(number/10);  //
+    number= quotient;
+    sum = sum + remainder;
+}
+console.log(sum);
+
+
+//// Qs. 4. Print the factorial of a number n.
+
+factorial = 1;
+
+for (i = 1; i<=5; i++) {
+    factorial*=i
+}
+console.log(factorial);
+
+
+//// Qs 5. Find the largest number in an array with only positive numbers.
+
+arr = [23, 42, 27, 56,86, 65, 9];
+
+let greatest = arr[0];
+
+for (num of arr){
+    if (num > greatest) {
+        greatest = num;
+    }
+}
+console.log(greatest);
