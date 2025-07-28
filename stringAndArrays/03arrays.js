@@ -1,3 +1,4 @@
+
 //// ------ slice method ------------
 
 cars = [ 'Ferrari', 'Toyota', 'Audi', 'BMW', 'Maruti', 'XUV' ];

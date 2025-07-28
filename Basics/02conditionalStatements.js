@@ -1,3 +1,4 @@
+
 console.log("Before my if statement");
 let age = 23;
 if (age >= 18) {
