@@ -86,7 +86,16 @@ console.log(Name.slice(4).replace("l","t").replace("l", "t"));
 
 
 
-//// ------- Slice method ------------
+//// ------- includes method ------------
 
 str = "IloveCoding";
 console.log(str.includes("love"))
+
+
+
+//// ------- concat method ------------
+
+str = "IloveCoding";
+let str2 = ' and you';
+let final = str.concat(str2)
+console.log(final)
