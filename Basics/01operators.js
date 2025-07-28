@@ -165,7 +165,7 @@ if (marks >= 33 && marks >= 80) {
 }
 
 
-/// || - Logical NOT operator
+/// || - Logical OR operator
 
 console.log(true || true);
 console.log(true || false);
