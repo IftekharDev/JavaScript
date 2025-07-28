@@ -83,3 +83,10 @@ console.log(fruit.repeat(3));
 Name = "ApnaCollege";
 console.log(Name.slice(4).replace("l","t").replace("l", "t"));
 
+
+
+
+//// ------- Slice method ------------
+
+str = "IloveCoding";
+console.log(str.includes("love"))
