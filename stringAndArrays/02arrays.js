@@ -5,7 +5,7 @@ let nums = [2, 4, 6, 8];
 
 let info = ["Salman", 25, 86];  // Mixed array
 
-let empArr = [];  // Empty Array
+let empArr = [];  //  Empty Array
 
 
 
