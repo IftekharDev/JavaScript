@@ -6,3 +6,4 @@ Following is the order of folders to study:
 3. loops
 4. objects
 5. functions
+6. Miscellaneous
