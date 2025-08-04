@@ -155,3 +155,24 @@ function sum(a, b= 5) {
 
 console.log(sum(5));
 console.log(sum(4,6));
+
+
+
+
+//// ------- Rest ----------------------
+
+function printElements(...args) {
+    for(let i =0; i<args.length; i++) {
+        console.log(args[i]);
+    }
+}
+
+printElements(1,2,39,56,47,564,34,2, "Hello", "Arsalan", "Solomon");
+
+
+function min(){
+    console.log(arguments);
+    console.log(arguments.length);
+}
+
+min(1,2,3,4);
