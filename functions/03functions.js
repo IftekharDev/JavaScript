@@ -144,3 +144,14 @@ function generateRandom(start, end) {
     let diff = end - start; 
     return Math.floor(Math.random() * diff) + start; 
 }
+
+
+
+//// -------- Default Parameters ---------
+
+function sum(a, b= 5) {
+    return a+b;
+}
+
+console.log(sum(5));
+console.log(sum(4,6));
