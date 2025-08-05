@@ -7,3 +7,4 @@ Following is the order of folders to study:
 4. objects
 5. functions
 6. Miscellaneous
+7. DOM
