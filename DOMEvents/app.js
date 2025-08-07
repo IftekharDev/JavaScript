@@ -115,6 +115,8 @@ box.addEventListener('mouseenter', function() {
 })
 
 
+
+
 //// ---- this in Event Listner ------------
 
 let btn2 = document.querySelector(".btn2");
@@ -150,6 +152,8 @@ para2.addEventListener('click', function() {
 })
 
 
+
+
 //// ---- good practice for same -------
 
 btn2 = document.querySelector(".btn2");
@@ -170,6 +174,8 @@ h1.addEventListener('click', addColor);
 h3.addEventListener('click', addColor);
 
 para2.addEventListener('click', addColor);
+
+
 
 
 ////--------Keyboard Events -----------
@@ -217,6 +223,8 @@ inp.addEventListener('keydown', function(event) {
 })
 
 
+
+
 //// --------- form events -----------------
 
 let form = document.querySelector("form");
@@ -225,6 +233,7 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     alert("form submitted");
 })
+
 
 
 
@@ -276,6 +285,7 @@ form.addEventListener('submit', function(event) {
 
 
 
+
 //// ---- change and input ----------
 
 form = document.querySelector("form");
@@ -302,6 +312,7 @@ textInp = document.querySelector("#text");
 textInp.addEventListener('input', function() {
     para.innerText = this.value;
 })
+
 
 
 
