@@ -275,7 +275,7 @@ body = document.querySelector('body');
 body.removeChild(btn);
 
 p.insertAdjacentElement('afterend', btn);
-btn.remove;
+btn.remove();
 
 
 
