@@ -22,3 +22,17 @@ h2 {
     background-color: violet;
     border: 1px solid black;
 }
+
+.div3 {
+    background-color: pink;
+    height: 200px;
+    width: 400px;
+}
+
+#ul1 {
+    background-color: blue;
+}
+
+.divli {
+    background-color: greenyellow;
+}
