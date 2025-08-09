@@ -8,7 +8,9 @@ let started = false;
 let level = 0;
 
 let h2 = document.querySelector("h2");
+let h3 = document.querySelector("h3");
 
+let highScore = 0;
 
 document.addEventListener("keypress", function() {
     if(started == false) {
@@ -58,6 +60,7 @@ function checkAns(idx) {
         }
     } else {
         h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br> Press any key to restart`;
+        checkHighScore(level);
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function() {
             document.querySelector("body").style.backgroundColor = "white";
@@ -89,4 +92,12 @@ function reset() {
     gameSeq = [];
     userSeq = [];
     level = 0;
+}
+
+
+function checkHighScore(score) {
+    if(score> highScore) {
+        highScore = score;
+        h3.innerText = `Your High Score - ${score}`;
+    }
 }
