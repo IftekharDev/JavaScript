@@ -97,3 +97,155 @@
 // });
 
 
+
+//// --------- Promises ---------------
+
+// function savetoDB(data, sucess, failure) {
+//     let internetSpeed = Math.floor(Math.random()*10) + 1;
+
+//     if(internetSpeed>4) {
+//         sucess();
+//     } else {
+//         failure();
+//     }
+// }
+
+// savetoDB(
+//     "Arsalan", 
+//     ()=> {
+//     console.log("Sucess ...Your data was saved");
+//     savetoDB("Hello World",
+//         () => {
+//             console.log("Sucess2 ...Your data was saved");
+//             savetoDB("Jake",
+//                 ()=> {
+//                     console.log("Sucess3 ...Your data was saved");
+//                 },
+//                 () => {
+//                     console.log("Failure3... Weak connection, Your data was not save");
+//                 }
+//             )
+//         },
+//         () => {
+//             console.log("Failure2... Weak connection, Your data was not save");
+//         }
+//     )
+//     }, 
+//     () => {
+//     console.log("Failure!... Weak connection, Your data was not save");
+//     }
+// );
+
+
+// function savetoDB(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random()*10) + 1;
+
+//         if(internetSpeed > 4) {
+//             resolve("sucess: data was saved...")
+//         } else {
+//             reject("falilure: weak connection, data was not saved...")
+//         }
+//     })
+// }
+
+// savetoDB("Arsalan");
+
+
+//// -----------.then() and .catch() and Promise chaining-----------
+
+// function savetoDB(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random()*10) + 1;
+
+//         if(internetSpeed > 4) {
+//             resolve("sucess: data was saved...")
+//         } else {
+//             reject("falilure: weak connection, data was not saved...")
+//         }
+//     })
+// }
+
+// request = savetoDB("Arsalan");   // request = promise obj
+
+// request
+//     .then(() =>{
+//     console.log("promise was resolved...");
+//     console.log(request);
+// })
+// .catch(() => {
+//     console.log("promise was rejected");
+//     console.log(request);
+// });
+
+//// --- compact version----
+
+// savetoDB("Arsalan")
+//     .then(() =>{
+//     console.log("promise was resolved...");
+// })
+// .catch(() => {
+//     console.log("promise was rejected");
+// });
+
+
+
+//// ---- Promise chaining -------
+
+// savetoDB("Arsalan")
+//     .then(() =>{
+//     console.log("data 1 was saved");
+//     savetoDB("Jake").then(() => {
+//         console.log("data 2 was saved...");
+//     })
+// })
+// .catch(() => {
+//     console.log("promise was rejected");
+// });
+
+
+// savetoDB("Arsalan")
+//     .then(() =>{
+//     console.log("data 1 was saved");
+//     return savetoDB("Jake");
+// })
+// .then(() => {
+//     console.log("data 2 was saved..");
+//     return savetoDB("Amy");
+// })
+// .then(() => {
+//     console.log("data 3 was saved...");
+// })
+// .catch(() => {
+//     console.log("promise was rejected");
+// });
+
+
+
+//// ------ Results and Errors in Promises -----------
+
+// savetoDB("Arsalan")
+//     .then((result) =>{
+//     console.log("data 1 was saved");
+//     console.log("result of promise: ", result);
+//     return savetoDB("Jake");
+// })
+// .then((result) => {
+//     console.log("data 2 was saved..");
+//     console.log("result of promise: ", result);
+//     return savetoDB("Amy");
+// })
+// .then((result) => {
+//     console.log("data 3 was saved...");
+//     console.log("result of promise: ", result);
+// })
+// .catch((error) => {
+//     console.log("promise was rejected");
+//     console.log("error of promise: ", error);
+// });
+
+
+
+//// ------------------------------------------------
+
+
