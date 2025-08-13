@@ -1,0 +1,99 @@
+
+//// -------------------- Call Stack----------------------
+
+// function hello() {
+//     console.log("Inside the hello function...");
+//     console.log("Hello");
+// }
+
+// function demo() {
+//     console.log("I've reached inside the demo function..");
+//     console.log("Calling the hello() function from demo...");
+//     hello();
+// }
+
+// console.log("Hiii, calling the demo() function...");
+// demo();
+
+
+// function one() {
+//     return 1;
+// }
+
+// function two() {
+//     return one() + one();
+// }
+
+// function three() {
+//     let ans = two() + one();
+//     console.log(ans);
+// }
+
+// three();
+
+
+//// ------ JS is single threaded ------------
+
+// setTimeout(()=> {
+//     console.log("Alex calls Cathrine...");
+// }, 1000)
+
+// setTimeout(()=> {
+//     console.log("Cathrine is with Jonas...");
+// }, 1000)
+
+// console.log("Chase tells Alex to call Cathrine..");
+
+
+
+//// ----- Callback Hell ---------------
+
+
+// h1 = document.querySelector("h1");
+
+// setTimeout(() => {
+//     h1.style.color = "red";
+// }, 1000);
+
+// setTimeout(() => {
+//     h1.style.color = "yellow";
+// }, 2000);
+
+// setTimeout(() => {
+//     h1.style.color = "green";
+// }, 3000);
+
+
+// h1 = document.querySelector("h1");
+
+// function changeColor(color , delay) {
+//     setTimeout(() => {
+//         h1.style.color = color;
+//     }, delay);
+// }
+
+// changeColor("red", 1000);
+// changeColor("yellow", 2000);
+// changeColor("green", 3000);
+
+
+// h1 = document.querySelector("h1");
+
+// function changeColor(color, delay, nextColorChange) {
+//     setTimeout(()=> {
+//         h1.style.color = color;
+//         if (nextColorChange) nextColorChange();
+//     }, delay);
+// }
+
+// changeColor('red', 1000, ()=> {
+//     changeColor("Yellow", 1000, () => {
+//         changeColor("green", 1000, () =>{
+//             changeColor("blue", 1000, () =>{
+//                 changeColor("pink", 1000)
+//             });
+//         });
+//     });
+// });
+
+
