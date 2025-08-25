@@ -103,3 +103,53 @@
 // console.log(studentJson);
 
 
+////  ---- API Call -----------
+
+let url = "https://catfact.ninja/fact";
+
+fetch(url).then((res) => {
+    console.log(res);
+    // console.log(res.json());
+    res.json().then((data) => {
+        console.log(data);
+    })
+}).catch((err) => {
+    console.log("Error : ", err);
+})
+
+
+url = "https://catfact.ninja/fact";
+
+fetch(url)
+.then((res) => {
+    console.log(res);
+    return res.json();
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((err) => {
+    console.log("Error : ", err);
+})
+
+
+
+url = "https://catfact.ninja/fact";
+
+fetch(url)
+.then((res) => {
+    return res.json();
+})
+.then((data) => {
+    console.log(data);
+    return fetch(url);
+})
+.then((res) => {
+    return res.json();
+})
+.then((data2) => {
+    console.log(data2.fact);
+})
+.catch((err) => {
+    console.log("Error : ", err);
+})
