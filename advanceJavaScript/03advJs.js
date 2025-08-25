@@ -45,36 +45,59 @@
 // }
 
 
-h1 = document.querySelector("h1");
+// h1 = document.querySelector("h1");
 
-function changeColor(color, delay) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            let num = Math.floor(Math.random()*5) +1;
+// function changeColor(color, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let num = Math.floor(Math.random()*5) +1;
 
-            if(num>3) {
-                reject("Promise rejected");
-            }
+//             if(num>3) {
+//                 reject("Promise rejected");
+//             }
 
-            h1.style.color = color;
-            console.log(`Color changed to ${color}`);
-            resolve();
-        }, delay);
-    });
-}
+//             h1.style.color = color;
+//             console.log(`Color changed to ${color}`);
+//             resolve();
+//         }, delay);
+//     });
+// }
 
-async function demo() {
-    try{
-        await changeColor("red", 1000);
-        await changeColor("yellow", 1000);
-        await changeColor("green", 1000);
-        await changeColor("blue", 1000);
-    } catch(err) {
-        console.log(err);
-        console.log("err caugt");
-    }
+// async function demo() {
+//     try{
+//         await changeColor("red", 1000);
+//         await changeColor("yellow", 1000);
+//         await changeColor("green", 1000);
+//         await changeColor("blue", 1000);
+//     } catch(err) {
+//         console.log(err);
+//         console.log("err caugt");
+//     }
     
-    let a = 5;
-    console.log(a);
-    console.log("new number = ", a+3);
+//     let a = 5;
+//     console.log(a);
+//     console.log("new number = ", a+3);
+// }
+
+
+
+//// ---- Accessing JSON data -------
+
+let JsonRes = '{"fact":"A cat\u2019s hearing is better than a dog\u2019s. And a cat can hear high-frequency sounds up to two octaves higher than a human.","length":119}'
+
+// console.log(JsonRes);
+// console.log(JsonRes.fact);
+
+// let validRes = JSON.parse(JsonRes);
+
+// console.log(validRes);
+// console.log(validRes.fact);
+
+
+let student = {
+    name : "Holder",
+    marks : 89
 }
+
+studentJson = JSON.stringify(student);
+console.log(studentJson);
