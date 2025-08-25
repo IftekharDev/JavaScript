@@ -83,7 +83,7 @@
 
 //// ---- Accessing JSON data -------
 
-let JsonRes = '{"fact":"A cat\u2019s hearing is better than a dog\u2019s. And a cat can hear high-frequency sounds up to two octaves higher than a human.","length":119}'
+// let JsonRes = '{"fact":"A cat\u2019s hearing is better than a dog\u2019s. And a cat can hear high-frequency sounds up to two octaves higher than a human.","length":119}'
 
 // console.log(JsonRes);
 // console.log(JsonRes.fact);
@@ -94,10 +94,12 @@ let JsonRes = '{"fact":"A cat\u2019s hearing is better than a dog\u2019s. And a 
 // console.log(validRes.fact);
 
 
-let student = {
-    name : "Holder",
-    marks : 89
-}
+// let student = {
+//     name : "Holder",
+//     marks : 89
+// }
 
-studentJson = JSON.stringify(student);
-console.log(studentJson);
+// studentJson = JSON.stringify(student);
+// console.log(studentJson);
+
+
