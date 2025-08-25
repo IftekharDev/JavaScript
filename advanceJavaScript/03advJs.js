@@ -105,32 +105,32 @@
 
 ////  ---- API Call -----------
 
-let url = "https://catfact.ninja/fact";
+// let url = "https://catfact.ninja/fact";
 
-fetch(url).then((res) => {
-    console.log(res);
-    // console.log(res.json());
-    res.json().then((data) => {
-        console.log(data);
-    })
-}).catch((err) => {
-    console.log("Error : ", err);
-})
+// fetch(url).then((res) => {
+//     console.log(res);
+//     // console.log(res.json());
+//     res.json().then((data) => {
+//         console.log(data);
+//     })
+// }).catch((err) => {
+//     console.log("Error : ", err);
+// })
 
 
-url = "https://catfact.ninja/fact";
+// url = "https://catfact.ninja/fact";
 
-fetch(url)
-.then((res) => {
-    console.log(res);
-    return res.json();
-})
-.then((data) => {
-    console.log(data);
-})
-.catch((err) => {
-    console.log("Error : ", err);
-})
+// fetch(url)
+// .then((res) => {
+//     console.log(res);
+//     return res.json();
+// })
+// .then((data) => {
+//     console.log(data);
+// })
+// .catch((err) => {
+//     console.log("Error : ", err);
+// })
 
 
 
