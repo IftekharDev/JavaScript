@@ -134,22 +134,39 @@
 
 
 
+// url = "https://catfact.ninja/fact";
+
+// fetch(url)
+// .then((res) => {
+//     return res.json();
+// })
+// .then((data) => {
+//     console.log(data);
+//     return fetch(url);
+// })
+// .then((res) => {
+//     return res.json();
+// })
+// .then((data2) => {
+//     console.log(data2.fact);
+// })
+// .catch((err) => {
+//     console.log("Error : ", err);
+// })
+
+
+////---------- Using fetch with async await--------
+
 url = "https://catfact.ninja/fact";
 
-fetch(url)
-.then((res) => {
-    return res.json();
-})
-.then((data) => {
-    console.log(data);
-    return fetch(url);
-})
-.then((res) => {
-    return res.json();
-})
-.then((data2) => {
-    console.log(data2.fact);
-})
-.catch((err) => {
-    console.log("Error : ", err);
-})
+
+async function getFacts() {
+    try {
+        let res = await fetch(url);
+        let data = await res.json();
+        console.log(data.fact);
+    } catch(e) {
+        console.log('err - ', e);
+    }
+     console.log("Good");
+}
