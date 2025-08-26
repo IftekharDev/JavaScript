@@ -163,14 +163,47 @@
 
 //// ----- Sending headers with API request ------------
 
-url = "https://icanhazdadjoke.com/";
+// url = "https://icanhazdadjoke.com/";
 
-async function getJokes() {
+// async function getJokes() {
+//     try {
+//         const config = {headers : {Accept : "application/json"}};
+//         let res = await axios.get(url, config);
+//         console.log(res.data);
+//     } catch(err) {
+//         console.log(err);
+//     }
+// }
+
+
+
+url = "http://universities.hipolabs.com/search?name=";
+btn = document.querySelector("#unibtn");
+
+async function getColleges(country) {
     try {
-        const config = {headers : {Accept : "application/json"}};
-        let res = await axios.get(url, config);
-        console.log(res.data);
+        let res = await axios.get(url+country);
+        return res.data
     } catch(err) {
         console.log(err);
+        return [];
     }
 }
+
+btn.addEventListener("click", async () => {
+    let country = document.querySelector("#country").value;
+    let res = await getColleges(country);
+    show(res);
+})
+
+function show(colleges) {
+    let list = document.querySelector("#list");
+    list.innerText = "";
+    for(college of colleges) {
+        let li = document.createElement("li");
+        li.innerText = college.name;
+        list.appendChild(li);
+    }
+}
+
+
