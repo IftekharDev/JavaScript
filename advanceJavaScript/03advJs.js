@@ -134,3 +134,26 @@ btn.addEventListener("click", async () => {
     let fact = await getFacts();
     p.innerText = fact;
 })
+
+
+
+//// ---- Random dog images -----------
+
+let url2 = "https://dog.ceo/api/breeds/image/random";
+let btn2 = document.querySelector("#dogbtn");
+
+async function getImageUrl() {
+    try{
+        let link = await axios.get(url2);
+        return link.data.message; 
+    } catch(e) {
+        console.log("Err - ", e);
+        return "/";
+    }
+}
+
+btn2.addEventListener("click", async () => {
+    let url = await getImageUrl();
+    let img = document.querySelector("img");
+    img.setAttribute("src", url);
+})
