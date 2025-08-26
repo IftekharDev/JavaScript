@@ -114,46 +114,63 @@
 
 //// ----------------
 
-let btn = document.querySelector("button");
-let p = document.querySelector('#fact');
+// let btn = document.querySelector("button");
+// let p = document.querySelector('#fact');
 
 
-url = "https://catfact.ninja/fact";
+// url = "https://catfact.ninja/fact";
 
-async function getFacts() {
-    try {
-        let res = await axios.get(url);
-        return res.data.fact;
-    } catch(e) {
-        console.log('err - ', e);
-        return "No fact found";
-    }
-}
+// async function getFacts() {
+//     try {
+//         let res = await axios.get(url);
+//         return res.data.fact;
+//     } catch(e) {
+//         console.log('err - ', e);
+//         return "No fact found";
+//     }
+// }
 
-btn.addEventListener("click", async () => {
-    let fact = await getFacts();
-    p.innerText = fact;
-})
+// btn.addEventListener("click", async () => {
+//     let fact = await getFacts();
+//     p.innerText = fact;
+// })
 
 
 
 //// ---- Random dog images -----------
 
-let url2 = "https://dog.ceo/api/breeds/image/random";
-let btn2 = document.querySelector("#dogbtn");
+// let url2 = "https://dog.ceo/api/breeds/image/random";
+// let btn2 = document.querySelector("#dogbtn");
 
-async function getImageUrl() {
-    try{
-        let link = await axios.get(url2);
-        return link.data.message; 
-    } catch(e) {
-        console.log("Err - ", e);
-        return "/";
+// async function getImageUrl() {
+//     try{
+//         let link = await axios.get(url2);
+//         return link.data.message; 
+//     } catch(e) {
+//         console.log("Err - ", e);
+//         return "/";
+//     }
+// }
+
+// btn2.addEventListener("click", async () => {
+//     let url = await getImageUrl();
+//     let img = document.querySelector("img");
+//     img.setAttribute("src", url);
+// })
+
+
+
+
+//// ----- Sending headers with API request ------------
+
+url = "https://icanhazdadjoke.com/";
+
+async function getJokes() {
+    try {
+        const config = {headers : {Accept : "application/json"}};
+        let res = await axios.get(url, config);
+        console.log(res.data);
+    } catch(err) {
+        console.log(err);
     }
 }
-
-btn2.addEventListener("click", async () => {
-    let url = await getImageUrl();
-    let img = document.querySelector("img");
-    img.setAttribute("src", url);
-})
