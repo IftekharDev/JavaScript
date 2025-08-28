@@ -1,0 +1,23 @@
+
+//// ---------- Basics ------------------
+
+Platform                                Command                     Description
+
+Git Bash (or Linux)                     ls                          list files (show my files)
+Windows cmd/terminal                    dir                         list files (show my files)
+
+
+Git Bash (or Linux)                     pwd                         Print working directory
+Windows cmd/terminal                    cd                          Print working directory
+
+
+Git Bash (or Linux)                     clear                       Clear Screen 
+Windows cmd/terminal                    cls                         Close or Clear Screen
+
+
+Git Bash (or Linux)                     cd                          Change Directory
+Windows cmd/terminal                    cd                          Change Directory
+
+
+Git Bash (or Linux)                     cd ..                       Back/Back Button
+Windows cmd/terminal                    cd ../ cd..                 Back/Back Button
