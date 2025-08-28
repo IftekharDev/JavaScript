@@ -1,10 +1,10 @@
 
-//// ---------- Basics ------------------
+//// ---------- Basics Terminal Commands------------------
 
 Platform                                Command                     Description
 
-Git Bash (or Linux)                     ls                          list files (show my files)
-Windows cmd/terminal                    dir                         list files (show my files)
+Git Bash (or Linux)                     ls                          List files (show my files)
+Windows cmd/terminal                    dir                         List files (show my files)
 
 
 Git Bash (or Linux)                     pwd                         Print working directory
@@ -44,5 +44,18 @@ Git Bash                                ls --help                   Give info ab
 Windows cmd/terminal                    dir /?                      Give info about dir Command
 
 
-Git Bash (or Linux)
-Windows cmd/terminal
+Git Bash (or Linux)                     touch index.js              Used to create files
+Windows cmd/terminal                    type nul > index.js         Used to create files
+
+
+Git Bash (or Linux)                     rm                          Remove files
+Windows cmd/terminal                    del                         Remove files
+
+
+Git Bash (or Linux)                     rmdir                       Removes empty folders
+Windows cmd/terminal                    rmdir                       Removes empty folders
+
+
+Git Bash (or Linux)                     rm -rf                      Removes any folder (rf - recursive force)
+Windows cmd/terminal                    
+
