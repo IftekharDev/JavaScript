@@ -20,4 +20,16 @@ Windows cmd/terminal                    cd                          Change Direc
 
 
 Git Bash (or Linux)                     cd ..                       Back/Back Button
-Windows cmd/terminal                    cd ../ cd..                 Back/Back Button
+Windows cmd/terminal                    cd .. or cd..               Back/Back Button
+
+
+Git Bash (or Linux)                     cd ../..                    Double Back
+Windows cmd/terminal                    cd ../..                    Double Back
+
+
+Git Bash (or Linux)                     cd /                        Root Directory
+Windows cmd/terminal                    cd /                        Root Directory
+
+
+Git Bash (or Linux)                     cd ~                        Home Directory
+Windows cmd/terminal                    N/A                         N/A
