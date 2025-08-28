@@ -33,3 +33,16 @@ Windows cmd/terminal                    cd /                        Root Directo
 
 Git Bash (or Linux)                     cd ~                        Home Directory
 Windows cmd/terminal                    N/A                         N/A
+
+
+Git Bash (or Linux)                     mkdir                       Create new folder/ Make Directory
+Windows cmd/terminal                    mkdir                       Create new folder/ Make Directory
+
+
+Linux                                   man ls                      Give info about ls Command
+Git Bash                                ls --help                   Give info about ls Command
+Windows cmd/terminal                    dir /?                      Give info about dir Command
+
+
+Git Bash (or Linux)
+Windows cmd/terminal
