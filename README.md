@@ -11,3 +11,4 @@ Following is the order of folders to study:
 8. DOM Events
 9. simonSaysGame
 10. advanceJavaScript
+11. Terminal
