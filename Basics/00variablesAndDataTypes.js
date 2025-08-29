@@ -1,8 +1,8 @@
 
-a = 10
+let a = 10
 console.log(a)
 
-b = 5
+let b = 5
 console.log(b)
 
 Name = "Tony"
@@ -13,10 +13,10 @@ console.log(a+b)
 a = 10
 console.log(typeof(a))
 
-age = 25
+let age = 25
 console.log(typeof(age))
 
-name = "Tony Stark"
+let name = "Tony Stark"
 console.log(typeof(name))
 
 console.log(typeof(5.9))
@@ -30,7 +30,7 @@ console.log(typeof("a"))
 a = 16
 console.log(typeof(a))
 
-price = 99.99
+let price = 99.99
 console.log(typeof(price))
 
 displacement = -25
@@ -111,7 +111,7 @@ console.log(4+1*6/2)  //7
 
 //// Qs. What is the value of age after this code runs?
 
-let age = 23;
+age = 23;
 console.log(age + 2)
 console.log(age)
 
@@ -129,16 +129,16 @@ console.log(avg)
 
 //// -------------------Assignment Operators-----------
 
-let a = 5;
-let b = a;
+a = 5;
+b = a;
 console.log(b)
 
 let age_ = 23;
-age +=2;
+age_ +=2;
 console.log(age_);
 
-age*=2;
-console.log(age)
+age_*=2;
+console.log(age_)
 
 
 
@@ -202,9 +202,9 @@ let age4
 let _age
 let $age
 
-let price = 5;
+price = 5;
 console.log(price)
-console.log(Price)  // price and Price are not same (case sensitive)
+//console.log(Price)  // price and Price are not same (case sensitive)
 
 
 
@@ -264,7 +264,7 @@ console.log(sentence)
 
 //// --------------------String Indices--------------------
 
-let name = "Tony Stark"
+name = "Tony Stark"
 console.log(name[0])
 console.log(name[1])
 console.log(name[2])
