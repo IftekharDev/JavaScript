@@ -22,3 +22,10 @@
 
 // const info = require("./Fruits")
 // console.log(info);
+
+
+//// -------------Export and Import in files via import statement-----------------------
+
+import {sum, PI} from "./02script.js";
+
+console.log(sum(2,4));
