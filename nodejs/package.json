@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Package.json for export import",
+  "license": "ISC",
+  "author": "Iftekhar",
+  "type": "module",
+  "main": "01script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
