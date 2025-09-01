@@ -83,6 +83,8 @@ app.post('/', (req, res) => {
 // });
 
 
+
+
 ////--------- Path parameters ----------------------------
 
 // const express = require("express");
@@ -105,6 +107,9 @@ app.get("/:username/:id", (req, res) => {
     let htmlStr = `<h1>Welcome to the page of @${username}.</h1>`
     res.send(htmlStr);
 });
+
+
+
 
 //// -----------Qquery String -------------
 
