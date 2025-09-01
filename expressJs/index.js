@@ -97,11 +97,21 @@ app.get("/", (req, res) => {
     res.send("Hii, I'm root path");
 });
 
-app.get("/:username/:id", (req, res) => {
-    // console.log(req.params);
-    let {username, id} = req.params;
-    let htmlStr = `<h1>Welcome to the page of @${username}.</h1>`
-    res.send(htmlStr);
-});
+// app.get("/:username/:id", (req, res) => {
+//     // console.log(req.params);
+//     let {username, id} = req.params;
+//     let htmlStr = `<h1>Welcome to the page of @${username}.</h1>`
+//     res.send(htmlStr);
+// });
 
+//// -----------Qquery String -------------
+
+app.get("/search", (req, res) => {
+    let {q} = req.query;
+    if(!q) {
+        res.send("<h1>Nothing searched</h1>");
+    }else{
+        res.send(`<h1>Search results for query: ${q}</h1>`);
+    }
+});
 
