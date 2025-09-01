@@ -49,8 +49,42 @@
 
 //// -----------------------------------------------------------------
 
+// const express = require("express");
+// const app = express(); 
+
+// const port = 3000;
+
+// app.listen(port, () => {
+//     console.log(`App is listening on port ${port}`);
+// });
+
+// // 1. Specific routes are defined first
+// app.get("/", (req, res) => {
+//     res.send("Hii, I'm root path");
+// });
+
+// app.get("/apple", (req, res) => {
+//     res.send("You contacted the apple path");
+// });
+
+// app.get("/mango", (req, res) => {
+//     res.send("You contacted the mango path");
+// });
+
+// app.post('/', (req, res) => {
+//     res.send("You sent a post request to root path.")
+// });
+
+// // 2. The wildcard route is defined last
+// app.use((req, res) => {                      //app.use must be used at last after defining all the specific paths
+//     res.send("This path doesn't exist");
+// });
+
+
+////--------- Path parameters ----------------------------
+
 const express = require("express");
-const app = express(); // Ensure parentheses are here
+const app = express();
 
 const port = 3000;
 
@@ -58,26 +92,16 @@ app.listen(port, () => {
     console.log(`App is listening on port ${port}`);
 });
 
-// 1. Specific routes are defined first
+
 app.get("/", (req, res) => {
-    res.send("You contacted the root path");
+    res.send("Hii, I'm root path");
 });
 
-app.get("/apple", (req, res) => {
-    res.send("You contacted the apple path");
-});
-
-app.get("/mango", (req, res) => {
-    res.send("You contacted the mango path");
-});
-
-app.post('/', (req, res) => {
-    res.send("You sent a post request to root path.")
-});
-
-// 2. The wildcard route is defined last
-app.use((req, res) => {                      //app.use must be used at last after defining all the specific paths
-    res.send("This path doesn't exist");
+app.get("/:username/:id", (req, res) => {
+    // console.log(req.params);
+    let {username, id} = req.params;
+    let htmlStr = `<h1>Welcome to the page of @${username}.</h1>`
+    res.send(htmlStr);
 });
 
 
