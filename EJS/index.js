@@ -9,6 +9,10 @@ const path = require("path");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
+app.listen(port, () => {
+    console.log(`listening on port ${port}`);
+});
+
 app.get("/", (req, res) => {
     res.render("home.ejs");
 });
@@ -17,8 +21,13 @@ app.get("/home", (req, res) => {
     res.send("hello");
 });
 
-app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+//// --------- Passing data to ejs-----------
+
+app.get("/rolldice", (req, res) => {
+    let diceValue = Math.floor(Math.random()*6) + 1;
+    res.render("rolldice.ejs", {diceValue});
 });
+
+
 
 
