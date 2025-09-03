@@ -28,10 +28,22 @@ app.get("/rolldice", (req, res) => {
     res.render("rolldice.ejs", {diceValue});
 });
 
+// app.get("/ig/:username", (req, res) => {
+//     let {username} = req.params;
+//     let followers = ["Jumbo", "Bob", "John", "Ramu"];
+//     res.render("instagram.ejs", {username, followers});
+// });
+
 app.get("/ig/:username", (req, res) => {
     let {username} = req.params;
-    let followers = ["Jumbo", "Bob", "John", "Ramu"];
-    res.render("instagram.ejs", {username, followers});
+    let instaData = require("./data.json");
+    let data = instaData[username];
+    if(data) {
+        res.render("insta.ejs", {data});
+    } else {
+        res.render("error.ejs", {username});
+    }
+    
 });
 
 
