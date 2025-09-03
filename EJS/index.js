@@ -30,7 +30,8 @@ app.get("/rolldice", (req, res) => {
 
 app.get("/ig/:username", (req, res) => {
     let {username} = req.params;
-    res.render("instagram.ejs", {username});
+    let followers = ["Jumbo", "Bob", "John", "Ramu"];
+    res.render("instagram.ejs", {username, followers});
 });
 
 
