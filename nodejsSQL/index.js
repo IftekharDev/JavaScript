@@ -9,8 +9,57 @@ const connection = mysql.createConnection({
   password: "IFtArs@7091"
 });
 
+// let q = "SHOW TABLES";
+
+// let q = "INSERT INTO user (id, username, email, password) VALUES (?, ?, ?, ?)";  //for inserting one user
+// let user = ["123", "abc_123", "abc@gmail.com", "abc"];
+
+// let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+// let users = [["123b", "abc_123b", "abcb@gmail.com", "abcb"], ["123c", "abc_123c", "abcc@gmail.com", "abcc"]];
+
+
+// try {
+//     connection.query(q, [users], (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
+// });
+// } catch(err) {
+//     console.log(err);
+// }
+
+// connection.end();
+
+// let getRandomUser = () => {
+//   return {
+//     id: faker.string.uuid(),
+//     username: faker.internet.username(),
+//     email: faker.internet.email(),
+//     password: faker.internet.password(),
+//   };
+// }
+
+// console.log(getRandomUser());
+
+//// Inserting User in Bulk---------------------
+
+let getRandomUser = () => {
+  return [
+    faker.string.uuid(),
+    faker.internet.username(),
+    faker.internet.email(),
+    faker.internet.password(),
+  ];
+}
+
+let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+let data = [];
+
+for(let i = 1; i<=100; i++) {
+  data.push(getRandomUser());
+}
+
 try {
-    connection.query("SHOW TABLES", (err, result) => {
+    connection.query(q, [data], (err, result) => {
     if (err) throw err;
     console.log(result);
 });
@@ -19,14 +68,3 @@ try {
 }
 
 connection.end();
-
-let getRandomUser = () => {
-  return {
-    id: faker.string.uuid(),
-    username: faker.internet.username(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-  };
-}
-
-// console.log(getRandomUser());
