@@ -5,7 +5,10 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require("path");
+const methodOverride = require("method-override");
 
+app.use(express.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
@@ -82,6 +85,9 @@ app.listen(port, () => {
   console.log("Server listening on port 3000.");
 });
 
+
+//// Home Route
+
 app.get("/", (req, res) => {
   let q = `SELECT COUNT(*) FROM user`;
   try{
@@ -95,6 +101,9 @@ app.get("/", (req, res) => {
     res.send("Some error in DB");
   }
 });
+
+
+//// Show all users route
 
 app.get("/users", (req, res) => {
   let q = `SELECT * FROM user`;
@@ -111,4 +120,46 @@ app.get("/users", (req, res) => {
 });
 
 
+//// Edit Route
 
+app.get("/user/:id/edit", (req, res) => {
+  let {id} = req.params;
+  let q = `SELECT * FROM user WHERE id='${id}'`;
+  try{
+      connection.query(q, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      let user = result[0];
+      res.render("edit.ejs", {user});
+    });
+  } catch(err) {
+    console.log(err);
+    res.send("Some error in DB");
+  }
+});
+
+//// Update Route 
+
+app.patch("/user/:id", (req, res) => {
+  let {id} = req.params;
+  let {password: formPass , username: newUsername} = req.body;
+  let q = `SELECT * FROM user WHERE id='${id}'`;
+  try{
+      connection.query(q, (err, result) => {
+      if(err) throw err;
+      let user = result[0];
+      if(formPass != user.password) {
+        res.send("Wrong Password!");
+      } else {
+        q2 = `UPDATE user SET username = '${newUsername}' WHERE id='${id}'`;
+        connection.query(q2, (err, result) => {
+          if (err) throw err;
+          res.redirect("/users");
+        });
+      }
+    });
+  } catch(err) {
+    console.log(err);
+    res.send("Some error in DB");
+  }
+});
