@@ -85,10 +85,24 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   let q = `SELECT COUNT(*) FROM user`;
   try{
-    connection.query(q, (err, result) => {
+      connection.query(q, (err, result) => {
       if(err) throw err;
       let count = result[0]["COUNT(*)"];
       res.render("home.ejs", {count});
+    });
+  } catch(err) {
+    console.log(err);
+    res.send("Some error in DB");
+  }
+});
+
+app.get("/users", (req, res) => {
+  let q = `SELECT * FROM user`;
+  try{
+      connection.query(q, (err, result) => {
+      if(err) throw err;
+      users = result;
+      res.render("showusers.ejs", {users});
     });
   } catch(err) {
     console.log(err);
