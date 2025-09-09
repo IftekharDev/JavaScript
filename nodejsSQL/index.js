@@ -4,6 +4,11 @@ const mysql = require('mysql2');
 const express = require("express");
 const app = express();
 const port = 3000;
+const path = require("path");
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -70,6 +75,8 @@ let getRandomUser = () => {
 //     console.log(err);
 // }
 
+// connection.end();
+
 
 app.listen(port, () => {
   console.log("Server listening on port 3000.");
@@ -80,8 +87,8 @@ app.get("/", (req, res) => {
   try{
     connection.query(q, (err, result) => {
       if(err) throw err;
-      console.log(result[0]["COUNT(*)"]);
-      res.send(result);
+      let count = result[0]["COUNT(*)"];
+      res.render("home.ejs", {count});
     });
   } catch(err) {
     console.log(err);
@@ -89,5 +96,5 @@ app.get("/", (req, res) => {
   }
 });
 
-// connection.end();
+
 
